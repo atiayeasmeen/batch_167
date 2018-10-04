@@ -1,6 +1,9 @@
 <?php
 
-function user_create($db, array $data){
+
+function user_create(array $data){
+
+    global $db;
 
     // Checkout the data
     // echo "<pre>";
@@ -14,7 +17,9 @@ function user_create($db, array $data){
     return ( $new_user === TRUE ) ? user_find($db, $db->insert_id) : false ;
 }
 
-function user_find($db, $user_id){
+function user_find($user_id){
+
+    global $db;
 
     $user = $db->query("SELECT * FROM users WHERE id = $user_id LIMIT 1");
 

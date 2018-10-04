@@ -35,7 +35,7 @@ if ( $new_user ) {
     echo "New user created successfully";
     
     echo "<pre>";
-    print_r( user_find($db, $db->insert_id) );
+    print_r( user_find($db->insert_id) );
     echo "</pre>";
 
 
