@@ -18,30 +18,30 @@ $password = ( isset($_GET['password']) ) ? $_GET['password'] : null;
 // Example 1
 // --------------------------------------------------------------------------
 
-// $new_user_create_query = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
+$new_user_create_query = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
 
 // Check the query string.
-// echo "<pre>";
-// var_dump($new_user_create_query);
-// echo "</pre>";
+echo "<pre>";
+var_dump($new_user_create_query);
+echo "</pre>";
 
 
 // Execute the new user create query
-// $new_user = $db->query($new_user_create_query);
+$new_user = $db->query($new_user_create_query);
 
 
-// if ( $new_user ) {
+if ( $new_user ) {
     
-//     echo "New user created successfully";
+    echo "New user created successfully";
     
-//     echo "<pre>";
-//     print_r( user_find($db, $db->insert_id) );
-//     echo "</pre>";
+    echo "<pre>";
+    print_r( user_find($db, $db->insert_id) );
+    echo "</pre>";
 
 
-// } else {
-//     echo "Error: <br>" . $db->error;
-// }
+} else {
+    echo "Error: <br>" . $db->error;
+}
 
 
 
