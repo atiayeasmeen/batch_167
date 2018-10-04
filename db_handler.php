@@ -6,7 +6,7 @@ define("USER_PASS", "");
 define("DATABASE_NAME", "php_practice");
 
 // Create connection
-$db_connection = $conn = new mysqli(SERVER_NAME, USER_NAME, USER_PASS, DATABASE_NAME);
+$db_connection = new mysqli(SERVER_NAME, USER_NAME, USER_PASS, DATABASE_NAME);
 
 
 // Check connection
